@@ -1,13 +1,9 @@
-
-
-
 import java.io.*;
 import java.util.*;
 
 // SyringWithDiffOf2Char
 
 public class SyringWithDiffOf2Char {
-
 
   // This Is Function for These Problem Difference
   public static String solution(String str) {
@@ -18,16 +14,12 @@ public class SyringWithDiffOf2Char {
       if (i == str.length() - 1) {
         char chi = str.charAt(i);
         sb.append(chi);
-      } 
-      
-      else {
+      } else {
         char chp = str.charAt(i); // Previous Character
         char chn = str.charAt(i + 1); // Next Character
         sb.append(chp);
         sb.append(chn - chp);
       }
-
-
     }
 
     return sb.toString();
@@ -37,9 +29,8 @@ public class SyringWithDiffOf2Char {
     Scanner scn = new Scanner(System.in);
     String str = scn.next();
 
-    String Result = solution(str);  // Calling Of Function
+    String Result = solution(str); // Calling Of Function
     System.out.println(Result);
-
   }
 }
 
