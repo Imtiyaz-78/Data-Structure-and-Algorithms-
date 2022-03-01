@@ -15,6 +15,7 @@ public class Pythagorem_Triplate{
       b = a;
       a = swap;
     }
+    
     else if(c>a && c>b ){
       int temp = a;
           a = c;

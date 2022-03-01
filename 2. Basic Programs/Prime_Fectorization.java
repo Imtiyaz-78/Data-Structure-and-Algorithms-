@@ -1,3 +1,5 @@
+
+
 import java.util.*;
 import java.io.*;
 
@@ -9,8 +11,8 @@ public class Prime_Fectorization {
     int n = Scn.nextInt();
 
   
-    for(int div = 2; div<=n; div++){
-      while(n%div==0){
+    for(int div = 2; div <= n; div++){
+      while(n % div == 0){
          n = n/div;
          System.out.print(div+ " ");
 

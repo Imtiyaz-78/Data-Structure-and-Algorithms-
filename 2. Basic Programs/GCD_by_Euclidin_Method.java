@@ -10,11 +10,12 @@ public class GCD_by_Euclidin_Method{
       //GCD_by_Euclidin_Method
 
      //HCF By Euclidin method 
-     while(a!=0){
+     while(a != 0){
          int r = b%a;
-         b=a;
-         a=r;
+         b = a;
+         a = r;
      }
+     
      System.out.println(b);
 
     }
