@@ -1,4 +1,5 @@
 
+
 import java.io.*;
 import java.util.*;
 
@@ -15,7 +16,7 @@ public class PrintIncreasing {
     // Faith => pi(n-1) = 1 2 3 .... n-3 n-2 n-1
     // EwF => pi(n) = pi(n-1) n
     public static void printIncreasing(int n){
-        if(n == 0){
+        if(n == 0){  // This is Base cases where the loop is Terminates
             return;
         }
         
