@@ -34,7 +34,7 @@ public class InsertElementInArray {
             }
             
             else{
-                for(int i = arr.length - 1; i>mid + 1; i--){
+                for( i = arr.length - 1; i>mid + 1; i--){
 
                 }
                 

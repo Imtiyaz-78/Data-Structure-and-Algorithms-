@@ -25,9 +25,10 @@
               arr[i] = scn.nextInt();
           }
           
+
           int foundAt = -1;
           int num = scn.nextInt();
-          for(int i = 0; i<arr.length; i++){
+          for(int i = 0; i < arr.length; i++){
 
               if(arr[i] == num){
                   foundAt = i;
