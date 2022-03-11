@@ -1,7 +1,6 @@
 // 9319277275
 // somtechie22@gmail.com
 
-//RemovePrimes.java
 import java.io.*;
 import java.util.*;
 

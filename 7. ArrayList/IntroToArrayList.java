@@ -7,7 +7,7 @@
          ArrayList <Integer> list; // Declare of ArrayList 
          list = new ArrayList<>(); // Define of ArrayList 
 
-         // ArrayList <Integer> list = new ArrayList<>(); in onlin you can Declare
+        //  ArrayList <Integer> list = new ArrayList<>();  //in oneline you can Declare
          
          // 1 Size Function
          System.out.println(list.size()+ " -> "  + list); // Size 0 []
@@ -43,14 +43,14 @@
          System.out.println();
 
         // Lopps in ArrayList
-        System.out.println("--------- Loop in ArrayLis ----------");
+        System.out.println("--------- Loop in ArrayList ----------");
         for(int i = 0; i < list.size(); i++){
             int val1 = list.get(i);
             System.out.println(val1);
         }
 
         // Lopp ia Array List 2nd Method
-        System.out.println("--------- Loop in ArrayLis 2nd Method ----------");
+        System.out.println("--------- Loop in ArrayList 2nd Method ----------");
         for(int val2 : list){
             System.out.println(val2);
         }
