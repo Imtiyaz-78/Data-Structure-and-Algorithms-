@@ -1,6 +1,6 @@
  
  import java.util.*;
- import java.io.*;
+//  import java.io.*;
 
  public class IntroToArrayList{
      public static void main(String[] args){
@@ -54,19 +54,5 @@
         for(int val2 : list){
             System.out.println(val2);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      }
  }  

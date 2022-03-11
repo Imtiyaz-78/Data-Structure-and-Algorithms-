@@ -3,6 +3,7 @@ import java.util.*;
 public class count_of_digits {
     public static void main(String[] args) {
         Scanner Scn = new Scanner(System.in);
+        Scn.close();
         int n = Scn.nextInt();
         int temp = n;
 
@@ -12,7 +13,7 @@ public class count_of_digits {
             temp = temp / 10;
             count = count + 1;
         }
-
+        
         // div = div^Count_of_digit-1
         int div = 1;
         for(int i = 1; i<=(count-1); i++){
@@ -26,6 +27,8 @@ public class count_of_digits {
             System.out.println(front);
             div = div/10;
         }
+
+        
 
     }
 }
