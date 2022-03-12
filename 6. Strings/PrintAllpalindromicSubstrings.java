@@ -18,6 +18,7 @@ public class PrintAllpalindromicSubstrings {
         }
       }
     }
+    scn.close();
   }
 
   public static boolean IsPalindrome(String sub) {
@@ -38,8 +39,11 @@ public class PrintAllpalindromicSubstrings {
     }
 
     return flag;
+   
   }
 }
+
+
 
 
 /*

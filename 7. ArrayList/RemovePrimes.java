@@ -38,18 +38,11 @@ public class RemovePrimes {
       al.add(scn.nextInt());
     }
 
-    String result = solution(al);
-    System.out.println(result); 
+    // String result = solution(al);
+    System.out.println(solution(al)); 
   }
+  
 }
-
-
-
-
-
-
-
-
 
 
 /*
