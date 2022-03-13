@@ -15,6 +15,7 @@ public class Prime_Fectorization {
       while(n % div == 0){
          n = n/div;
          System.out.print(div+ " ");
+         Scn.close();
 
     }
   } 
