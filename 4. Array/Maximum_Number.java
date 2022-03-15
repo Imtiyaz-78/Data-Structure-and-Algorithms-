@@ -1,6 +1,6 @@
 
 
-import java.io.*;
+// import java.io.*;
 import java.util.*;
 
 public class Maximum_Number {
@@ -35,6 +35,7 @@ public class Maximum_Number {
         System.out.println();
         System.out.println(" Maximum Number In Array : " + max);
         System.out.println(" Minimum Number In Array : " + min);
+        scn.close();
         
     }
 }
