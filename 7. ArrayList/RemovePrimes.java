@@ -1,4 +1,4 @@
-// 9319277275
+// 9319277275 tiwari bro.. pep
 // somtechie22@gmail.com
 
 import java.io.*;
@@ -39,7 +39,8 @@ public class RemovePrimes {
     }
 
     // String result = solution(al);
-    System.out.println(solution(al)); 
+    solution(al);
+		System.out.println(al); 
   }
   
 }
