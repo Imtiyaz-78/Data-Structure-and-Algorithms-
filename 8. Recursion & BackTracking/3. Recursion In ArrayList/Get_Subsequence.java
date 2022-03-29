@@ -1,3 +1,4 @@
+
 // import java.io.*;
 import java.util.*;
 
@@ -20,7 +21,7 @@ public class Get_Subsequence {
         if(str.length() == 0){
             ArrayList<String> bres = new ArrayList<>();
             String thebss = "";
-            bres.add(thebss); //[""]with size 1, bres.get(0).length == 0
+            bres.add(thebss);  //[""]with size 1, bres.get(0).length == 0
             return bres;
             
         }
