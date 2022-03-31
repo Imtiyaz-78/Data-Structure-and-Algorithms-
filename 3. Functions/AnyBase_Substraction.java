@@ -23,17 +23,17 @@ import java.util.*;
 
          while( n2 > 0 ) {
 
-           int d1 = n1%10;
-           int d2 = n2%10;
+           int d1 = n1 % 10;
+           int d2 = n2 % 10;
 
            n1 = n1/10;
            n2 = n2/10;
 
            int result = d2 - carry - d1;
           
-           if(d<0){
+           if( result < 0 ){
              carry = 1;
-             d = d+b;
+             result = result + b;
            }
 
            else {

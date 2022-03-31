@@ -19,27 +19,32 @@ public class Get_Maze_Path {
     // dc - destination column
     public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc) {
         if (sr > dr || sc > dc) {
+            // Negative Base case
             ArrayList<String> bres = new ArrayList<>();
             return bres;
-        } else if (sr == dr && sc == dc) {
+        } 
+        
+        else if (sr == dr && sc == dc) {
+            // positive base case 
             ArrayList<String> bres = new ArrayList<>();
             bres.add("");
             return bres;
         }
 
-        ArrayList<String> mypaths = new ArrayList<>();
-        ArrayList<String> myhpaths = getMazePaths(sr, sc + 1, dr, dc);
-        ArrayList<String> myvpaths = getMazePaths(sr + 1, sc, dr, dc);
+        ArrayList<String> res = new ArrayList<>();
 
-        for (String myhpath : myhpaths) {
-            mypaths.add("h" + myhpath);
+        ArrayList<String> rightpaths = getMazePaths(sr, sc + 1, dr, dc);
+        for (String str : rightpaths) {
+            res.add("h" + str);
+        }
+        
+
+        ArrayList<String> downpaths = getMazePaths(sr + 1, sc, dr, dc);
+        for (String str : downpaths) {
+            res.add("v" + str);
         }
 
-        for (String myvpath : myvpaths) {
-            mypaths.add("v" + myvpath);
-        }
-
-        return mypaths;
+        return res;
     }
 
 }
