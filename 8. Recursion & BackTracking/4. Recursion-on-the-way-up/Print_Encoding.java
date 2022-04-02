@@ -8,6 +8,7 @@ public class Print_Encoding {
         Scanner scn = new Scanner(System.in);
         String input = scn.next();
         printEncodings(0, input, ""); // zero is index Number & "" ye hai output wali string
+        scn.close();
 
     }
 
@@ -28,7 +29,7 @@ public class Print_Encoding {
         if (idx + 1 < input.length()) {
             int ch2 = (input.charAt(idx) - '0') * 10 + (input.charAt(idx + 1) - '0');
 
-            if (ch2 >= 20 && ch2 <= 26) {
+            if (ch2 >= 10 && ch2 <= 26) {
                 printEncodings(idx + 2, input, output + (char) ('a' + ch2 - 1));
             }
         }
