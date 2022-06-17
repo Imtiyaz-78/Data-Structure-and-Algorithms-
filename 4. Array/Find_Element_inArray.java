@@ -27,7 +27,7 @@
           
 
           int foundAt = -1;
-          int num = scn.nextInt();
+          int target = scn.nextInt();
           for(int i = 0; i < arr.length; i++){
 
               if(arr[i] == num){

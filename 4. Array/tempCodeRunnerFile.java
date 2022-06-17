@@ -1,3 +1,6 @@
-
-
-        for(int i = 1; i< arr.length; i++){
+ 5
+    1
+    2
+    3
+    4
+    5
