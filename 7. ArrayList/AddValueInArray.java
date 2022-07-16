@@ -18,12 +18,10 @@ public class AddValueInArray {
 
     int idx = scan.nextInt();
     int val = scan.nextInt();
-    // list.remove(idx);
+    // list.remove(idx); // for remove arne ke liye function
     list.add(idx, val);
     System.out.println(list);
 
     scan.close();
-
-    
   }
 }
