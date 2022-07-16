@@ -2,22 +2,27 @@
 import java.io.*;
 import java.util.*;
 
-public class Bubble_Sort {
-    
-    // Function
-    public static void bubbleSort(int[] arr) {
+import javax.sound.midi.MidiMessage;
+
+public class Selection_Sort {
+
+    public static void selectionSort(int[] arr) {
         // write your code here
-        for(int start = 1; start <= arr.length - 1; start++){
-            for(int j = 0; j <= arr.length - 1- start; j++){
-                if(isSmaller(arr, j + 1, j) == true){
-                    swap(arr, j + 1, j);
+        for (int str = 0; str <= arr.length - 2; str++) {
+            int minix = str;
+            for (int j = str + 1; j <= arr.length - 1; j++) {
+                if (isSmaller(arr, j, minix) == true) {
+                    minix = j;
                 }
             }
+
+            swap(arr, str, minix);
+
         }
 
     }
 
-    // Used for swapping ith and jth elements of array
+    // used for swapping ith and jth elements of array
     public static void swap(int[] arr, int i, int j) {
         System.out.println("Swapping " + arr[i] + " and " + arr[j]);
         int temp = arr[i];
@@ -48,18 +53,18 @@ public class Bubble_Sort {
         for (int i = 0; i < n; i++) {
             arr[i] = scn.nextInt();
         }
-        bubbleSort(arr);
+        selectionSort(arr);
         print(arr);
     }
 
 }
 
 /*
-Bubble Sort
+Selection Sort
 Easy
 
 1. You are given an array(arr) of integers.
-2. You have to sort the given array in increasing order using bubble sort.
+2. You have to sort the given array in increasing order using selection sort.
 
 Constraints
 1 <= N <= 10000
@@ -87,27 +92,22 @@ Sample Input
 
 Sample Output
 Comparing -2 and 7
-Swapping -2 and 7
-Comparing 4 and 7
-Swapping 4 and 7
-Comparing 1 and 7
-Swapping 1 and 7
-Comparing 3 and 7
-Swapping 3 and 7
 Comparing 4 and -2
+Comparing 1 and -2
+Comparing 3 and -2
+Swapping 7 and -2
+Comparing 4 and 7
 Comparing 1 and 4
-Swapping 1 and 4
-Comparing 3 and 4
-Swapping 3 and 4
-Comparing 1 and -2
 Comparing 3 and 1
-Comparing 1 and -2
+Swapping 7 and 1
+Comparing 7 and 4
+Comparing 3 and 4
+Swapping 4 and 3
+Comparing 4 and 7
+Swapping 7 and 4
 -2
 1
 3
 4
 7
  */
-
-
-
