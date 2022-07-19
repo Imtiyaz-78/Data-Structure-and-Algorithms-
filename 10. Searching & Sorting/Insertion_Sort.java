@@ -2,22 +2,14 @@
 import java.io.*;
 import java.util.*;
 
-public class Bubble_Sort {
-    
-    // Function
-    public static void bubbleSort(int[] arr) {
+public class Insertion_Sort {
+
+    public static void insertionSort(int[] arr) {
         // write your code here
-        for(int start = 1; start <= arr.length - 1; start++){
-            for(int j = 0; j <= arr.length - 1- start; j++){
-                if(isSmaller(arr, j + 1, j) == true){
-                    swap(arr, j + 1, j);
-                }
-            } 
-        }
 
     }
 
-    // Used for swapping ith and jth elements of array
+    // used for swapping ith and jth elements of array
     public static void swap(int[] arr, int i, int j) {
         System.out.println("Swapping " + arr[i] + " and " + arr[j]);
         int temp = arr[i];
@@ -25,13 +17,12 @@ public class Bubble_Sort {
         arr[j] = temp;
     }
 
-    // return true if ith element is smaller than jth element
-    public static boolean isSmaller(int[] arr, int i, int j) {
+    // return true if jth element is greater than ith element
+    public static boolean isGreater(int[] arr, int j, int i) {
         System.out.println("Comparing " + arr[i] + " and " + arr[j]);
         if (arr[i] < arr[j]) {
             return true;
-        }
-         else {
+        } else {
             return false;
         }
     }
@@ -49,32 +40,31 @@ public class Bubble_Sort {
         for (int i = 0; i < n; i++) {
             arr[i] = scn.nextInt();
         }
-        bubbleSort(arr);
+
+        insertionSort(arr);
         print(arr);
     }
 
 }
 
 /*
-Bubble Sort
+Insertion Sort
 Easy
 
 1. You are given an array(arr) of integers.
-2. You have to sort the given array in increasing order using bubble sort.
+2. You have to sort the given array in increasing order using insertion sort.
 
 Constraints
 1 <= N <= 10000
 -10^9 <= arr[i] <= 10^9
 
-Format
+Format:-
+
 Input
 An Integer n 
 arr1
 arr2..
 n integers
-
-Output
-Check the sample ouput and question video.
 
 Example
 Sample Input
@@ -86,29 +76,26 @@ Sample Input
 1 
 3
 
-Sample Output
+Sample Output:-
+
 Comparing -2 and 7
-Swapping -2 and 7
+Swapping 7 and -2
 Comparing 4 and 7
-Swapping 4 and 7
-Comparing 1 and 7
-Swapping 1 and 7
-Comparing 3 and 7
-Swapping 3 and 7
+Swapping 7 and 4
 Comparing 4 and -2
+Comparing 1 and 7
+Swapping 7 and 1
 Comparing 1 and 4
-Swapping 1 and 4
+Swapping 4 and 1
+Comparing 1 and -2
+Comparing 3 and 7
+Swapping 7 and 3
 Comparing 3 and 4
-Swapping 3 and 4
-Comparing 1 and -2
+Swapping 4 and 3
 Comparing 3 and 1
-Comparing 1 and -2
 -2
 1
 3
 4
 7
- */
-
-
-
+*/
