@@ -7,7 +7,7 @@ public class The_curious_case{
         Scanner Scn= new Scanner(System.in);
         int n = Scn.nextInt();
  
-        for(int s_of_n = 1; s_of_n * s_of_n <= n; s_of_n++){
+        for(int s_of_n = 1; s_of_n * s_of_n <= n; s_of_n++){  // Square of n 
             int square = s_of_n * s_of_n;
             System.out.println(square);
         }

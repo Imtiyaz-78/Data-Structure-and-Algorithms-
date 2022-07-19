@@ -13,8 +13,8 @@ public class print_prime_between_range {
 
             int count = 0;
 
-            for(int div = 2; div*div<=n; div++){
-                if(n%div == 0){
+            for(int div = 2; div * div <= n; div++){
+                if(n % div == 0){
                     count++;
                     break;
                 }

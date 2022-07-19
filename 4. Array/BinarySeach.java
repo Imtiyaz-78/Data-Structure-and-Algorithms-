@@ -8,12 +8,14 @@ public class BinarySeach {
         int n = scn.nextInt();
 
         int[] arr = new int[n];
-        for (int i = 0; i < arr.length; i++) {
+        
+        for (int i; = 0; i < arr.length; i++) {
             arr[i] = scn.nextInt();
-        }
-
+          }
+        
+      
         int target = scn.nextInt();
-
+         
         int left = 0;
         int right = arr.length - 1;
         int foundAt = -1;
@@ -30,13 +32,13 @@ public class BinarySeach {
             }
 
             else {
-                foundAt = mid[i];
+                foundAt = arr[mid];
                 break;
             }
         }
 
         System.out.println();
-        System.out.println(" Target Element in Array index Number : " + foundAt);
+        System.out.println("Target Element in Array index Number : " + foundAt);
 
     }
 
