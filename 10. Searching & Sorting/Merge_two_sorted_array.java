@@ -31,7 +31,9 @@ public class Merge_two_sorted_array {
                 j++;
                 k++;
             }
-        }else if(j == b.length){
+        }
+        
+        else if(j == b.length){
             while(i < a.length){
               ans[k] = a[i];
               i++;
@@ -56,6 +58,7 @@ public class Merge_two_sorted_array {
         for (int i = 0; i < n; i++) {
             a[i] = scn.nextInt();
         }
+
         int m = scn.nextInt();
         int[] b = new int[m];
         for (int i = 0; i < m; i++) {
@@ -66,6 +69,7 @@ public class Merge_two_sorted_array {
     }
 
 }
+
 /*
 Merge Two Sorted Arrays
 Easy
