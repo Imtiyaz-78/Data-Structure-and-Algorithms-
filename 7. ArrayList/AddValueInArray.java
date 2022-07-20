@@ -1,4 +1,4 @@
-
+import java.io.*;
 import java.util.*;
 
 public class AddValueInArray {
@@ -13,7 +13,6 @@ public class AddValueInArray {
       list.add(v);
     }
 
-
     System.out.println(list);
 
     int idx = scan.nextInt();
@@ -25,6 +24,3 @@ public class AddValueInArray {
     scan.close();
   }
 }
-
-
-
