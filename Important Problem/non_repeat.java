@@ -4,11 +4,13 @@ import java.io.*;
 
 public class non_repeat {
     // 7 8 3 1 2 7
+
     public static int firstNonRepeating(int arr[], int n) {
         for (int i = 0; i < n; i++) {
             int j;
+            int count = 0;
             for (j = 0; j < n; j++)
-                if (i != j && arr[i] == arr[j])
+                if (i != j && arr[i] == arr[j]);
                     break;
             if (j == n)
                 return arr[i];
@@ -16,6 +18,8 @@ public class non_repeat {
 
         return -1;
     }
+
+    
 
     public static void main(String[] args) {
 

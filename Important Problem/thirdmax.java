@@ -1,6 +1,7 @@
 
 // Very Important Question 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class thirdmax {
@@ -15,15 +16,17 @@ public class thirdmax {
         }
 
         int temp;
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                if (arr[i] > arr[j]) {
-                    temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-        System.out.println(arr[n - 3]);
+        // for (int i = 0; i < n; i++) {
+        //     for (int j = i + 1; j < n; j++) {
+        //         if (arr[i] > arr[j]) {
+        //             temp = arr[i];
+        //             arr[i] = arr[j];
+        //             arr[j] = temp;
+        //         }
+        //     }
+        // }
+        Arrays.sort(arr);
+        int ans = Math.max(a, b)
+        System.out.println(arr[n - 3] * arr[n-2] * arr[n-1]);
     }
 }

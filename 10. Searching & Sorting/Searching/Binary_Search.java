@@ -36,8 +36,13 @@ public class Binary_Search {
             }
         }
 
-        System.out.println();
-        System.out.println("Target Element in Array index Number : " + foundAt);
+        if (foundAt == -1) {
+            System.out.println("element not found");
+        } else {
+            System.out.println("Target Element in Array index Number : " + foundAt);
+        }
+
+      
 
     }
 
