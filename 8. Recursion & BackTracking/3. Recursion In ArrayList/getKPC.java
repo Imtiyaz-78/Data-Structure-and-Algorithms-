@@ -1,5 +1,5 @@
 
-// import java.io.*;
+import java.io.*;
 import java.util.*;
 
 public class getKPC {
@@ -10,7 +10,6 @@ public class getKPC {
         ArrayList<String> words = getKPC(str);
         System.out.println(words);
 
-        scn.close();
     }
 
     public static String[] codes = { ".;", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz" };
@@ -41,6 +40,45 @@ public class getKPC {
     }
 
 }
+/*
+ import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        String str = scn.nextLine();
+        ArrayList<String> words = getKPC(str);
+        System.out.println(words);
+    }
+
+    static String[] codes = {".;", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz"};
+    public static ArrayList<String> getKPC(String str) { // 196
+        if(str.length() == 0){
+            ArrayList<String> bwords = new ArrayList<>();
+            bwords.add("");
+            return bwords;
+        }
+        
+        char ch = str.charAt(0); //'1' => abc
+        String ros = str.substring(1); //96
+        ArrayList<String> rres = getKPC(ros); // 96 => yp, yq, yr, ys, zp, zq, zr, zs
+        ArrayList<String> mres = new ArrayList<>(); // []
+        String code = codes[ch - 48]; // codes['1' - 48] = codes[1] = abc
+        
+        for(int i = 0; i < code.length(); i++){ // abc
+            char chcode = code.charAt(i); // a, b, c
+            for(String rstr: rres){ // yp, yq, yr, ys, zp, zq, zr, zs
+                mres.add(chcode + rstr);
+            }
+        }
+        
+        return mres;
+    }
+
+}
+*/
 
 /*
  * Get Kpc

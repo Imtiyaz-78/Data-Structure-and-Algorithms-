@@ -11,6 +11,7 @@ public class MergeSort {
       arr[i] = scn.nextInt();
     }
 
+
     arr = MergeSort(arr, 0, arr.length - 1);
     for(int i = 0; i < arr.length; i++) {
       int val = arr[i];
@@ -75,5 +76,8 @@ public class MergeSort {
     return ans;
   }
 }
+
+
+
 
 

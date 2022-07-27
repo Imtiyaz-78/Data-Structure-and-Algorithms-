@@ -7,13 +7,13 @@ public class Bubble_Sort {
     // Function
     public static void bubbleSort(int[] arr) {
         // write your code here
-        for(int start = 1; start <= arr.length - 1; start++){
-            for(int j = 0; j <= arr.length - 1- start; j++){
-                if(isSmaller(arr, j + 1, j) == true){
-                    swap(arr, j + 1, j);
-                }
-            } 
-        }
+            for(int start = 1; start <= arr.length - 1; start++){
+                for(int j = 0; j <= arr.length - 1- start; j++){
+                    if(isSmaller(arr, j + 1, j) == true){
+                        swap(arr, j + 1, j);
+                    }
+                } 
+            }
 
     }
 
