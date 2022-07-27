@@ -1,18 +1,22 @@
+
 import java.util.*;
 import java.io.*;
 
-public class Sort01 {
+public class Move_Zero_To_End {
 
     public static void sort(int arr[], int n) {
 
         int i = 0;
         int j = 0;
-        while(i < arr.length){
-            if(arr[i]== 1){
+        while (i < arr.length) {
+            
+            if (arr[i] == 0) {
                 i++;
 
-            } else {
-                swap(arr, i, j);
+            } 
+            
+            else if (arr[i] != 0) {
+                swap(arr, j , i);
                 i++;
                 j++;
             }
@@ -30,7 +34,7 @@ public class Sort01 {
 
     public static void print(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i] + " ");
+            System.out.print(arr[i] + " ");
         }
     }
 
@@ -47,47 +51,3 @@ public class Sort01 {
         print(arr);
     }
 }
-
-/*
- * Sort 01
- * Easy
- * 
- * 1. You are given an array(arr) containing only 0's and 1's.
- * 2. You have to sort the given array in increasing order and in linear time.
- * Without extra Spaces
- * 
- * 
- * Constraints
- * 1 <= N <= 10000
- * arr[i] = 0,1
- * 
- * Format
- * Input
- * An Integer N
- * arr1
- * arr2..
- * n integers
- * 
- * Output
- * Check the sample output and question video.
- * 
- * Example
- * Sample Input
- * 
- * 5
- * 0
- * 1
- * 0
- * 1
- * 0
- * 
- * Sample Output
- * Swapping index 0 and index 0
- * Swapping index 2 and index 1
- * Swapping index 4 and index 2
- * 0
- * 0
- * 0
- * 1
- * 1
- */
