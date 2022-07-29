@@ -48,3 +48,48 @@ public class Even_Odd {
         print(arr);
     }
 }
+/*
+class Main {
+
+public static void main(String[] args){
+
+int[] arr = {1,2,3,4,5};
+
+int[] ans = new int[arr.length];
+
+int j = 0;
+
+for(int i: arr){
+
+if(i%2==0){
+
+ans[j++] = i;
+
+}
+
+}
+
+for(int i: arr){
+
+if(i%2!=0){
+
+ans[j++] = i;
+
+}
+
+}
+
+for(int i: ans){
+
+System.out.println(i);
+
+}
+
+}
+
+}
+ */
+// 5
+// 9 3 10 11 12
+// output come 
+// 10 12 9 3 11
