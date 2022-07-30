@@ -1,0 +1,18 @@
+
+what is Git:-
+   Git sis open source version control System designed to manage project.
+   git is tool to manage project.
+   git is set of instruction
+
+
+What is github:-
+   git is a code hosting platform for collaboration and version control 
+
+Git Setup & Config:-
+    mkdir this create folder gitbas command
+    git Config -- global user.name  " "
+    git Config -- global user.eamil " " 
+
+    --> clone means copy
+    --> touch se new file banti hai touch demo.txt
+    --> ls

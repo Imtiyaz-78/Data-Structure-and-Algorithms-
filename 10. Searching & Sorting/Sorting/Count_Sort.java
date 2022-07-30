@@ -16,7 +16,7 @@ public class Main {
             farr[val - min]++;
         }
 
-        // convert the freq to psa
+        // convert the freq to psa // prefix sum array
         for (int i = 1; i < farr.length; i++) {
             farr[i] += farr[i - 1];
         }
