@@ -8,14 +8,12 @@ public class Print_Encoding {
         Scanner scn = new Scanner(System.in);
         String input = scn.next();
         printEncodings(0, input, ""); // zero is index Number & "" ye hai output wali string
-        scn.close();
 
     }
 
     public static void printEncodings(int idx, String input, String output) {
 
-        if (idx == input.length()) {
-            // Positive Base Case
+        if (idx == input.length()) {   // Positive Base Case
             System.out.println(output);
             return;
         }
