@@ -20,7 +20,10 @@ public class Ad_Last {
             node.next = null;
 
             if (size == 0) {
-                head = tail = node;
+                // head = tail = node; // or
+                head = tail;
+                tail = node;
+              
             } 
             else {
                 tail.next = node;
@@ -44,28 +47,23 @@ public class Ad_Last {
     }
 
     public static void main(String[] args) throws Exception {
-        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         LinkedList list = new LinkedList();
 
-        list.addLast(20);
-        list.addLast(30);
-        list.addLast(40);
-        testList(list);
-       
-
-        // String str = br.readLine();
+    
+        String str = br.readLine();
         
-        // while (str.equals("quit") == false) {
-        //     if (str.startsWith("addLast")) {
-        //         int val = Integer.parseInt(str.split(" ")[1]);
-        //         list.addLast(val);
-        //     }
-        //     str = br.readLine();
-        // }
+        while (str.equals("quit") == false) {
+            if (str.startsWith("addLast")) {
+                int val = Integer.parseInt(str.split(" ")[1]);
+                list.addLast(val);
+            }
+            str = br.readLine();
+        }
 
        
 
-        // testList(list);
+        testList(list);
     }
 }
 

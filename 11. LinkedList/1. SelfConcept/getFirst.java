@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Display_LinkedList {
+public class getFirst {
     public static class Node {
         int data;
         Node next;
@@ -13,7 +13,7 @@ public class Display_LinkedList {
         Node tail;
         int size;
 
-        // o(1)
+        // o1
         void addLast(int val) {
             Node temp = new Node();
             temp.data = val;
@@ -29,32 +29,42 @@ public class Display_LinkedList {
             size++;
         }
 
+        // o1
         public int size() {
             return size;
         }
 
-        // o(n)
+        // on
         public void display() {
-            for (Node temp = head; temp != null; temp = temp.next) { // traverse on node
+            for (Node temp = head; temp != null; temp = temp.next) {
                 System.out.print(temp.data + " ");
             }
             System.out.println();
         }
+
+        // o1
+        public int getFirst() {
+            if (size == 0) {
+                System.out.println("List is empty");
+                return -1;
+            }
+
+            return head.data;
+        }
+
     }
 
     public static void main(String[] args) throws Exception {
-
+        Scanner scn = new Scanner(System.in);
         LinkedList list = new LinkedList();
-        list.addLast(10);
-        list.addLast(20);
-        list.display();
-        System.out.println(list.size());
 
-        // list.display();
-        // list.addLast(10);
-        // list.display();
-        // list.addLast(20);
-        // list.display();
+        int n = scn.nextInt();
+        for (int i = 0; i < n; i++) {
+            list.addLast(scn.nextInt());
+        }
+
+        int ans = list.getFirst();
+        System.out.println(ans);
 
     }
 }
