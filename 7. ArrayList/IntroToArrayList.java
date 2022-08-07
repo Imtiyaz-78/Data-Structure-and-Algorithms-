@@ -7,7 +7,7 @@
          ArrayList <Integer> list; // Declare of ArrayList 
          list = new ArrayList<>(); // Define of ArrayList 
 
-        //  ArrayList <Integer> list = new ArrayList<>();  //in oneline you can Declare
+        //  ArrayList <Integer> list = new ArrayList<>();  //in one line you can Declare
          
          // 1 Size Function
          System.out.println(list.size()+ " -> "  + list); // Size 0 []

@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class addFirst {
+public class Main {
   public static class Node {
     int data;
     Node next;
@@ -85,17 +85,40 @@ public class addFirst {
     }
 
     public void addFirst(int val) {
-      Node node = new Node();
-      node.data = val;
-
+      Node temp = new Node();
+      temp.data = val;
+      temp.next = head;
+      head = temp;
+      
       if(size == 0){
-          head = tail = node;
-      } else {
-          node.next = head;
-          head = node;
+        tail = temp;
       }
 
       size++;
+    }
+
+    public void addAt(int idx, int val){
+      // write your code here
+      if(idx == 0){
+          addFirst(val);
+      } else if(idx == size){
+          addLast(val);
+      } else if(idx < 0 || idx > size){
+          System.out.println("Invalid arguments");
+      } else {
+          Node nm1 = head;
+          for(int i = 0; i < idx - 1; i++){
+              nm1 = nm1.next;
+          }
+          Node np1 = nm1.next;
+
+          Node node = new Node();
+          node.data = val;
+          node.next = np1;
+
+          nm1.next = node;
+          size++;
+      }
     }
   }
 
@@ -133,7 +156,11 @@ public class addFirst {
       } else if (str.startsWith("addFirst")) {
         int val = Integer.parseInt(str.split(" ")[1]);
         list.addFirst(val);
-      }
+      } else if (str.startsWith("addAt")) {
+        int idx = Integer.parseInt(str.split(" ")[1]);
+        int val = Integer.parseInt(str.split(" ")[2]);
+        list.addAt(idx, val);
+      } 
       str = br.readLine();
     }
   }

@@ -28,7 +28,6 @@ public class Remove_Element_FromArray {
     System.out.println(list.toString().replace("[","").replace("]",""));
     System.out.println(list.toString().replace("[", "").replace("]",""));
 
-    scn.close();
     
   }
 }

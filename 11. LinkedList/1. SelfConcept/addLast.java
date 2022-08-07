@@ -53,8 +53,6 @@ import java.util.LinkedList;
         LinkedList list = new LinkedList();
         int n = scn.nextInt();
 
-
-
         for(int i = 0; i < n; i++){
             list.addLast(scn.nextInt());
         }

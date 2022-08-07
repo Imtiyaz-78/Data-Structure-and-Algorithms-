@@ -1,8 +1,9 @@
-
-import java.io.*;
 import java.util.*;
+import java.io.*;
+import java.util.LinkedList;
 
-public class getLast {
+public class removeFirst {
+
     public static class Node {
         int data;
         Node next;
@@ -13,14 +14,14 @@ public class getLast {
         Node tail;
         int size;
 
-        // o1
         void addLast(int val) {
             Node temp = new Node();
             temp.data = val;
             temp.next = null;
 
             if (size == 0) {
-                head = tail = temp;
+                head = temp;
+                tail = temp;
             } 
             
             else {
@@ -31,12 +32,10 @@ public class getLast {
             size++;
         }
 
-        // o1
         public int size() {
             return size;
         }
 
-        // on
         public void display() {
             for (Node temp = head; temp != null; temp = temp.next) {
                 System.out.print(temp.data + " ");
@@ -44,29 +43,36 @@ public class getLast {
             System.out.println();
         }
 
-        // o1
-        public int getLast() {
+        public void removeFirst() {
             if (size == 0) {
                 System.out.println("List is empty");
-
             }
 
-            return tail.data;
-        }
+            else if (size == 1) {
+                head = null;
+                tail = null;
+                size = 0;
+            }
 
+            else {
+                head = head.next;
+                size--;
+            }
+        }
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         LinkedList list = new LinkedList();
 
         int n = scn.nextInt();
         for (int i = 0; i < n; i++) {
-            list.addLast(scn.nextInt());
+            int val = scn.nextInt();
+            list.addLast(val);
         }
 
-        int result = list.getLast();
-        System.out.println(" Last Elemt in LinkedList " + " " + result);
+        list.removeFirst();
+        list.display();
 
     }
 }
