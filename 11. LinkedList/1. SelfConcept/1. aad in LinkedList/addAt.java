@@ -20,7 +20,8 @@ public class addAt {
 
             if (size == 0) {
                 head = tail = temp;
-            } else {
+            } 
+            else {
                 tail.next = temp;
                 tail = temp;
             }
@@ -56,17 +57,23 @@ public class addAt {
             // write your code here
             if (idx == 0) {
                 addFirst(val);
-            } else if (idx == size) {
+            } 
+            
+            else if (idx == size) {
                 addLast(val);
-            } else if (idx < 0 || idx > size) {
+            }
+             else if (idx < 0 || idx > size) {
                 System.out.println("Invalid arguments");
-            } else {
+            }
+            
+            else {
                 Node nm1 = head;
                 for (int i = 0; i < idx - 1; i++) {
-                    nm1 = nm1.next;
+                    nm1 = nm1.next;// nm1 --> n minus 1 yani ek pichhe
                 }
-                Node np1 = nm1.next;
 
+                Node np1 = nm1.next; // np1 number of postition
+ 
                 Node node = new Node();
                 node.data = val;
                 node.next = np1;

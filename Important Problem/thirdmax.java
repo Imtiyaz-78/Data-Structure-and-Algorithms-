@@ -15,8 +15,8 @@ public class thirdmax {
             arr[i] = scn.nextInt();
         }
 
-        int temp;
-        // for (int i = 0; i < n; i++) {
+        // int temp;
+        // for (int i = 0; i < n; i++) { // Time O(n^2)
         //     for (int j = i + 1; j < n; j++) {
         //         if (arr[i] > arr[j]) {
         //             temp = arr[i];
@@ -25,8 +25,8 @@ public class thirdmax {
         //         }
         //     }
         // }
-        Arrays.sort(arr);
-        int ans = Math.max(a, b)
+        Arrays.sort(arr); // Time O(logn)
+        // int ans = Math.max(a, b);
         System.out.println(arr[n - 3] * arr[n-2] * arr[n-1]);
     }
 }

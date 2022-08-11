@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class getAt {
+public class getFirst {
     public static class Node {
         int data;
         Node next;
@@ -21,7 +21,9 @@ public class getAt {
 
             if (size == 0) {
                 head = tail = temp;
-            } else {
+            }
+            
+            else {
                 tail.next = temp;
                 tail = temp;
             }
@@ -42,40 +44,29 @@ public class getAt {
             System.out.println();
         }
 
-        // on
-        public int getAt(int idx) {
+        // o1
+        public int getFirst() {
             if (size == 0) {
                 System.out.println("List is empty");
-
+                return -1;
             }
 
-            else if (idx < 0 || idx >= size) {
-                System.out.println("Invalid arguments");
-
-            }
-
-            Node temp = head;
-            for (int i = 0; i < idx; i++) {
-                temp = temp.next;
-            }
-            return temp.data;
+            return head.data;
         }
+
     }
 
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
         LinkedList list = new LinkedList();
-       
+
         int n = scn.nextInt();
         for (int i = 0; i < n; i++) {
             list.addLast(scn.nextInt());
         }
 
-        int idx = scn.nextInt();
+        int ans = list.getFirst();
+        System.out.println(ans);
 
-        int value = list.getAt(idx);
-        if (value != -1) {
-            System.out.println(value);
-        }
     }
 }
