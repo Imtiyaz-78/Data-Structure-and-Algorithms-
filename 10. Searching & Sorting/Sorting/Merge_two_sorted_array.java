@@ -21,14 +21,18 @@ public class Merge_two_sorted_array {
         k++;
       }
     }
+    
 
-    if (i == a.length) {
+    // Dono mein se koee ek array ka data khatam ho gya then ye condition apply hoga
+    if (i == a.length) { // first array ka data khtam means end pr pahunch gya hai
       while (j < b.length) {
         ans[k] = b[j];
         j++;
         k++;
       }
-    } else if (j == b.length) {
+    } 
+    
+    else if (j == b.length) { // 2nd array ka data khatam 
       while (i < a.length) {
         ans[k] = a[i];
         i++;
