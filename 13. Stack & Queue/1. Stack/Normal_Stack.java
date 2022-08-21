@@ -31,7 +31,7 @@ public class Normal_Stack {
 
         void push(int val) {
             // write ur code here
-            if (top == arr.length - 1) {
+            if (top == arr.length - 1) { // or size() == arr.length
                 // Stack Overflow
                 System.out.println("Stack overflow");
                 return;
@@ -43,7 +43,7 @@ public class Normal_Stack {
 
         int pop() {
             // Time --> O(1)
-            if (top == -1) {
+            if (top == -1) { // size() == 0
                 System.out.println("Stack underflow");
                 return -1;
             }
