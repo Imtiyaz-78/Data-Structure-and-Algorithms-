@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 import java.util.Scanner;
 
-public class Normal_Stack {
+public class Custom_Stack {
 
     public static class CustomStack {
         int[] arr;
@@ -23,7 +23,7 @@ public class Normal_Stack {
 
         void display() {
             // Time ->O(N)
-            for (int i = 0; i < arr.length; i++) {
+            for (int i = arr.length -1; i >=0; i--) {
                 System.out.print(arr[i] + " ");
             }
             System.out.println();
@@ -47,6 +47,7 @@ public class Normal_Stack {
                 System.out.println("Stack underflow");
                 return -1;
             }
+
             int val = arr[top];
             top--;
             return val;
@@ -70,19 +71,23 @@ public class Normal_Stack {
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        CustomStack st = new CustomStack(n);
+        CustomStack stack = new CustomStack(n);
+        // Stack<Integer> stack = new Stack<>();
 
         for(int i = 0; i < n; i++){
-             st.push(scn.nextInt());
+            stack.push(scn.nextInt());
         }
 
-        st.display();
+         stack.display();
+         System.out.println(stack.top());
+        
+        // System.out.println(stack.pop());
+        // System.out.println(stack.pop());
+        // System.out.println(stack.pop());
+        // System.out.println(stack.pop());
+        // System.out.println(stack.pop());
 
-        int val = st.pop();
-        val = st.pop();
-        val = st.pop();
-        val = st.pop();
-        System.out.println(val);
+    
       
     }
 }
