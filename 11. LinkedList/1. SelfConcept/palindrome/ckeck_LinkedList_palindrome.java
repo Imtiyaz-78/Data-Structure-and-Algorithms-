@@ -1,9 +1,8 @@
 
-import java.util.LinkedList;
 import java.io.*;
 import java.util.*;
 
-public class reverse{
+public class ckeck_LinkedList_palindrome {
     public static class Node {
         int data;
         Node next;
@@ -21,7 +20,8 @@ public class reverse{
 
             if (size == 0) {
                 head = tail = temp;
-            } else {
+            } 
+            else {
                 tail.next = temp;
                 tail = temp;
             }
@@ -40,24 +40,30 @@ public class reverse{
             System.out.println();
         }
 
-      
-        public void reversePI() {
-           
-            Node prev = null;
-            Node curr = head;
 
-            while (curr != null) {
-                Node next = curr.next;
-
-                curr.next = prev; 
-
-                prev = curr;
-                curr = next;
+        public boolean IsPalindromeHelper(Node right) {
+            if (right == null) {
+                return true;
             }
 
-            Node temp = head;
-            head = tail;
-            tail = temp;
+            boolean rres = IsPalindromeHelper(right.next);
+            if (rres == false) {
+                return false;
+            }
+             else if (pleft.data != right.data) {
+                return false;
+            }
+             else {
+                pleft = pleft.next;
+                return true;
+            }
+        }
+
+        Node pleft;
+
+        public boolean IsPalindrome() {
+            pleft = head;
+            return IsPalindromeHelper(head);
         }
     }
 
@@ -66,13 +72,12 @@ public class reverse{
         LinkedList list = new LinkedList();
 
         int n = scn.nextInt();
-        for(int i = 0; i < n; i++){
-          int val = scn.nextInt();
-          list.addLast(val);
+
+        for (int i = 0; i < n; i++) {
+            int val = scn.nextInt();
+            list.addLast(val);
         }
-           
-       list.reversePI();
-       list.display();
-          
+
+        System.out.println(list.IsPalindrome());
     }
 }

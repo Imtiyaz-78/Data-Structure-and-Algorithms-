@@ -13,15 +13,13 @@ public class thirdlargest {
             return;
         }
 
-        // Find first
-        // largest element
+      
         int first = arr[0];
         for (int i = 1; i < n; i++)
             if (arr[i] > first)
                 first = arr[i];
 
-        // Find second
-        // largest element
+        
         int second = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++)
             if (arr[i] > second &&  arr[i] < first)
@@ -35,7 +33,7 @@ public class thirdlargest {
                     
                 third = arr[i];
 
-          System.out.println(first * second * third); // Triplate Product of third max
+          System.out.println(third); // Triplate Product of third max
      
         
    

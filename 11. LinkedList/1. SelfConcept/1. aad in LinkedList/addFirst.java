@@ -29,7 +29,7 @@ public class addFirst {
             Node node = new Node();
             node.data = val;
 
-            if (size == 0) {
+            if (size == 0) {  // Base Case
                 head = node;
                 tail = node;
             }
@@ -54,7 +54,7 @@ public class addFirst {
     //    list.addFirst(5);
     //    list.display();
 
-    for(int i = 0; i < n; i++){ // By user 
+    for(int i = 0; i < n; i++){  // Taking Input From The User
        list.addFirst(scn.nextInt());
     }
 

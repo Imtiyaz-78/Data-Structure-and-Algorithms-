@@ -21,13 +21,13 @@ public class Display_LinkedList {
             if (size == 0) {
                 // head = tail = node;
                 tail = node;
-                head = tail;
+                head = node;
             }
             
             else {
                 tail.next = node;
-                // tail = node;
-                 tail = tail.next;
+                tail = node;
+                 
             }
 
             size++;

@@ -13,7 +13,7 @@ public class Target_Sum_Pair {
             arr[i] = scn.nextInt();
         }
         // Sort Array
-        Arrays.sort(arr); // time nlon
+        Arrays.sort(arr); // time nlogn
 
         // meet in the middle
         int left = 0;
@@ -22,7 +22,9 @@ public class Target_Sum_Pair {
         while (left < right) { // n
             if (arr[left] + arr[right] > target) {
                 right--;
-            } else if (arr[left] + arr[right] < target) {
+            } 
+            
+            else if (arr[left] + arr[right] < target) {
                 left--;
             }
 

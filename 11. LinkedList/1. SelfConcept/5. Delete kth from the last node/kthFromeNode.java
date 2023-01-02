@@ -148,6 +148,7 @@ public class kthFromeNode {
 
         int idx = scn.nextInt();
         System.out.println(list.kthFromLast(idx));
+        list.display();
 
     }
 }
